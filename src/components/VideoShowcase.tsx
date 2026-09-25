@@ -7,7 +7,7 @@ interface VideoShowcaseProps {
 }
 
 export const VideoShowcase: React.FC<VideoShowcaseProps> = ({
-  videoSrc = '/assets/video.mp4',
+  videoSrc = '/assets/aptaic-promo.mp4',
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
