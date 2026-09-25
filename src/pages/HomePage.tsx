@@ -1,7 +1,6 @@
 import React from 'react';
 import { HeroSection } from '../components/HeroSection';
 import { TrustIntroSection } from '../components/TrustIntroSection';
-import { VideoShowcase } from '../components/VideoShowcase';
 import { ServicesSection } from '../components/ServicesSection';
 import { WhyAptaicSection } from '../components/WhyAptaicSection';
 import { PortfolioSection } from '../components/PortfolioSection';
@@ -40,28 +39,25 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 2. TRUST / INTRO */}
       <TrustIntroSection />
 
-      {/* 3. PROMOTIONAL VIDEO */}
-      <VideoShowcase videoSrc="/assets/aptaic-promo.mp4" />
-
-      {/* 4. SERVICES PREVIEW (With tap-to-view pricing) */}
+      {/* 3. SERVICES PREVIEW (With tap-to-view pricing) */}
       <ServicesSection onSelectService={onSelectService} />
 
-      {/* 5. WHY APTAIC */}
+      {/* 4. WHY APTAIC */}
       <WhyAptaicSection />
 
-      {/* 6. FEATURED PORTFOLIO */}
+      {/* 5. FEATURED PORTFOLIO */}
       <PortfolioSection onSelectProject={onSelectProject} />
 
-      {/* 7. PRICING PREVIEW */}
+      {/* 6. PRICING PREVIEW */}
       <PricingSection onSelectPlan={onSelectPlan} />
 
-      {/* 8. LEADERSHIP */}
+      {/* 7. LEADERSHIP */}
       <LeadershipSection />
 
-      {/* 9. CALL TO ACTION */}
+      {/* 8. CALL TO ACTION */}
       <CallToAction onStartProject={onStartProject} />
 
-      {/* 10. CONTACT */}
+      {/* 9. CONTACT */}
       <ContactSection />
     </div>
   );
