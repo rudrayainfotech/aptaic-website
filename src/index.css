@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-navy: #071A41;
+  --color-navy-dark: #040F26;
+  --color-navy-light: #0D224A;
+  --color-blue-brand: #126BFF;
+  --color-blue-accent: #2575FC;
+  --color-cyan-brand: #00C6FF;
+  --color-purple-brand: #6C3BFF;
+  --color-gray-soft: #F6F8FC;
+  --color-gray-border: #E5E9F2;
+  --color-dark-text: #111827;
+}
+
+/* Custom Luxury Styles & Utilities */
+:root {
+  --navy: #071A41;
+  --blue: #126BFF;
+  --cyan: #00C6FF;
+  --purple: #6C3BFF;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: #F8FAFD;
+  color: #111827;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 20px 40px -15px rgba(7, 26, 65, 0.05), 0 0 1px 1px rgba(18, 107, 255, 0.04);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 233, 242, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(7, 26, 65, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(18, 107, 255, 0.25);
+  box-shadow: 0 20px 40px -10px rgba(18, 107, 255, 0.12), 0 0 0 1px rgba(18, 107, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(229, 233, 242, 0.7);
+}
+
+.glass-dark {
+  background: rgba(7, 26, 65, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #071A41 0%, #126BFF 50%, #6C3BFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #126BFF 0%, #00C6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-light {
+  background: linear-gradient(135deg, #FFFFFF 0%, #A5C9FF 60%, #00C6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 35px -5px rgba(18, 107, 255, 0.35);
+}
+
+.glow-subtle {
+  box-shadow: 0 15px 35px -10px rgba(18, 107, 255, 0.15);
+}
+
+/* Background Grids & Patterns */
+.bg-tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(18, 107, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18, 107, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(18, 107, 255, 0.1) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Luxury button styling */
+.btn-primary {
+  background: linear-gradient(135deg, #071A41 0%, #126BFF 100%);
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 20px -4px rgba(18, 107, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 28px -6px rgba(18, 107, 255, 0.45);
+}
+
+.btn-secondary {
+  background: #FFFFFF;
+  color: #071A41;
+  border: 1px solid #E5E9F2;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary:hover {
+  background: #F6F8FC;
+  border-color: #126BFF;
+  transform: translateY(-2px);
+  color: #126BFF;
+}
+
+/* 3D Perspective Container */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Subtle Floating Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s ease-in-out infinite;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F4F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
